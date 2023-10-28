@@ -33,3 +33,16 @@ let getJohnOrders = () => {
 };
 
 // Start coding here
+
+async function johnProfile() {
+  try {
+      let profileData = await getJohnProfile();
+      console.log(profileData);
+      let ordersData = await getJohnOrders();
+      console.log(ordersData);
+  } catch (error) {
+      console.error(error);
+  }
+};
+
+johnProfile();
